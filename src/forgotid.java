@@ -1,3 +1,9 @@
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,12 +15,20 @@
  * @author Bikash Sao
  */
 public class forgotid extends javax.swing.JFrame {
+    Connection conn=null;
+    ResultSet rs=null;
+    PreparedStatement pst=null;
+    String filename=null;
+    int s=0;
+    byte[] person_image=null;
 
     /**
      * Creates new form forgotid
      */
     public forgotid() {
+        super("Forgot ID");
         initComponents();
+        conn=javaconnect.ConnecrDb();
     }
 
     /**
@@ -88,6 +102,11 @@ public class forgotid extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton1.setText("Click To Varify");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel12.setText("Retrived Student's Hostel ID: ");
@@ -101,9 +120,19 @@ public class forgotid extends javax.swing.JFrame {
 
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton2.setText("Go Back To Renew Student");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jButton3.setText("Main Menu");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -198,6 +227,59 @@ public class forgotid extends javax.swing.JFrame {
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jComboBox1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        String sql="select shid from student where sfn=? and sln=? and mfn=? and mln=? and sq=? and sqa=?";
+        try{
+            pst=conn.prepareStatement(sql);
+            pst.setString(1,jTextField1.getText());
+            pst.setString(2,jTextField2.getText());
+            pst.setString(3,jTextField5.getText());
+            pst.setString(4,jTextField6.getText());
+            pst.setString(5,(String)jComboBox1.getSelectedItem());
+            pst.setString(6,jTextField7.getText());
+            rs=pst.executeQuery();
+            if(rs.next()){
+                String shid=rs.getString("shid");
+                jTextField8.setText(shid);
+                
+                
+                rs.close();
+                pst.close();
+               
+            }else{
+                JOptionPane.showMessageDialog(null,"Please check Details....Provided One Doesn't exist");
+                
+            }
+            
+            
+        }catch(Exception e){
+        JOptionPane.showMessageDialog(null, e);
+        } finally{
+            try{
+                rs.close();
+                pst.close();
+                
+            }catch(Exception e){
+                
+            }
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        renew ob=new renew();
+        ob.setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        first ob=new first();
+        ob.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
