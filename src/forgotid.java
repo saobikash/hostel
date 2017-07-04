@@ -269,14 +269,14 @@ public class forgotid extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
+        this.dispose();
         renew ob=new renew();
         ob.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
+        this.dispose();
         first ob=new first();
         ob.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed

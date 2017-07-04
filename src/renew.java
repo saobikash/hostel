@@ -372,7 +372,7 @@ public class renew extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
+        this.dispose();
         renew ob=new renew();
         ob.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -440,21 +440,21 @@ public class renew extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
+        this.dispose();
         first ob=new first();
         ob.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
+        this.dispose();
         welcome ob=new welcome();
         ob.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
+        this.dispose();
         forgotid ob=new forgotid();
         ob.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed

@@ -148,14 +148,14 @@ public class changepass extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
+        this.dispose();
         first ob=new first();
         ob.setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        setVisible(false);
+        this.dispose();
         welcome ob=new welcome();
         ob.setVisible(true);
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -177,6 +177,15 @@ public class changepass extends javax.swing.JFrame {
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
         }
+        finally{
+            try{
+                rs.close();
+                pst.close();
+                
+            }catch(Exception e){
+                
+            }
+        } 
         
         }
     }//GEN-LAST:event_jButton1ActionPerformed

@@ -48,9 +48,7 @@ public class welcome extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMaximumSize(new java.awt.Dimension(1366, 768));
         setMinimumSize(new java.awt.Dimension(1366, 768));
-        setPreferredSize(new java.awt.Dimension(1366, 768));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -61,17 +59,17 @@ public class welcome extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 250, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 200, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 255, 255));
         jLabel1.setText("UserId");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 140, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 90, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 255, 255));
         jLabel2.setText("Password");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 200, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 150, -1, -1));
 
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -79,7 +77,7 @@ public class welcome extends javax.swing.JFrame {
                 jTextField1KeyPressed(evt);
             }
         });
-        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 130, 205, -1));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 80, 205, -1));
 
         jPasswordField1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -92,15 +90,13 @@ public class welcome extends javax.swing.JFrame {
                 jPasswordField1KeyPressed(evt);
             }
         });
-        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 200, 205, -1));
+        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 150, 205, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon("F:\\kaam wala\\Logomakr_1sf6K8.png")); // NOI18N
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/black-abstract-wallpaper-phone.jpg"))); // NOI18N
-        jLabel5.setMaximumSize(new java.awt.Dimension(1366, 768));
-        jLabel5.setMinimumSize(new java.awt.Dimension(1366, 768));
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1950, -1));
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/firewatch-nighttime-scene-x-post-from-ramoledbackgrounds-1366×768.jpg"))); // NOI18N
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -140, -1, 1040));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -155,7 +151,7 @@ public class welcome extends javax.swing.JFrame {
             rs=pst.executeQuery();
             if(rs.next()){
                 
-               setVisible(false);
+               this.dispose();
                 first ob=new first();
                 ob.setVisible(true);
                 rs.close();
@@ -192,7 +188,7 @@ public class welcome extends javax.swing.JFrame {
             rs=pst.executeQuery();
             if(rs.next()){
                 
-               setVisible(false);
+               this.dispose();
                 first ob=new first();
                 ob.setVisible(true);
                 rs.close();
