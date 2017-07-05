@@ -597,7 +597,7 @@ public class addstudent extends javax.swing.JFrame {
             {JOptionPane.showMessageDialog(null, "Please Insert All Fields"); }
          else{
         try{
-            String sql="insert into student(shid,sfn,sln,ffn,fln,mfn,mln,address,course,sq,sqa,photo,fee,rno,bno) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ";
+            String sql="insert into student(shid,sfn,sln,ffn,fln,mfn,mln,address,course,sq,sqa,photo,fee,rno,bno,year) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ";
             String sql2="update room set rno=?,bno=? where rowid=1";
             pst2=conn.prepareStatement(sql2);
             pst=conn.prepareStatement(sql);
@@ -617,6 +617,7 @@ public class addstudent extends javax.swing.JFrame {
             pst.setString(13,jTextField9.getText());
             pst.setString(14,jTextField11.getText());
             pst.setString(15,jTextField12.getText());
+            pst.setString(16,"1");
             pst2.setString(1,jTextField11.getText());
             pst2.setString(2,jTextField12.getText());
             pst2.execute();
