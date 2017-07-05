@@ -34,7 +34,7 @@ public class completedata extends javax.swing.JFrame {
     }
     public void jTable1(){
         try{
-            String sql="select shid'Hostel ID' ,sfn'Student fst name',sln'last name',ffn'father fst name',fln'last name',mfn'mother fst name',mln'last name',address,course from student";
+            String sql="select shid'Hostel ID' ,sfn'Student fst name',sln'last name',ffn'father fst name',fln'last name',mfn'mother fst name',mln'last name',address,course,year from student";
             pst=conn.prepareStatement(sql);
             rs=pst.executeQuery();
             jTable1.setModel(DbUtils.resultSetToTableModel(rs));
