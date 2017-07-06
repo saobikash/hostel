@@ -121,7 +121,7 @@ public class first extends javax.swing.JFrame {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        this.dispose();
+       
         about ob=new about();
         ob.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
