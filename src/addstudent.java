@@ -599,8 +599,10 @@ public class addstudent extends javax.swing.JFrame {
         try{
             String sql="insert into student(shid,sfn,sln,ffn,fln,mfn,mln,address,course,sq,sqa,photo,fee,rno,bno,year) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ";
             String sql2="update room set rno=?,bno=? where rowid=1";
+            String sql3="update printable set shid=? where rowid=1";
             pst2=conn.prepareStatement(sql2);
             pst=conn.prepareStatement(sql);
+            pst3=conn.prepareStatement(sql3);
             pst.setString(1,jTextField7.getText());
             pst.setString(2,jTextField1.getText());
             pst.setString(3,jTextField2.getText());
@@ -620,8 +622,9 @@ public class addstudent extends javax.swing.JFrame {
             pst.setString(16,"1");
             pst2.setString(1,jTextField11.getText());
             pst2.setString(2,jTextField12.getText());
+            pst3.setString(1,jTextField7.getText());
             pst2.execute();
-            
+            pst3.execute();
             
             
            pst.execute();
@@ -629,7 +632,7 @@ public class addstudent extends javax.swing.JFrame {
            rs.close();
            pst.close();
            this.dispose();
-           addstudent ob=new addstudent();
+           print ob=new print();
            ob.setVisible(true);
             
         }catch(Exception e){
