@@ -33,7 +33,7 @@ public class roomlayout extends javax.swing.JFrame {
     }
     public void jTable1(){
         try{
-            String sql="select shid'Hostel ID' ,sfn'Student fst name',sln'last name',rno'Room No.',bno'Bed No.',course from student";
+            String sql="select shid'Hostel ID' ,sn'Student name',rno'Room No.',bno'Bed No.',course from student";
             pst=conn.prepareStatement(sql);
             rs=pst.executeQuery();
             jTable1.setModel(DbUtils.resultSetToTableModel(rs));

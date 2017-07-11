@@ -97,6 +97,12 @@ public class addstudent extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        jTextField13 = new javax.swing.JTextField();
+        jTextField14 = new javax.swing.JTextField();
+        jComboBox3 = new javax.swing.JComboBox<>();
+        jLabel19 = new javax.swing.JLabel();
+        jTextField15 = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
 
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("jCheckBoxMenuItem1");
@@ -122,7 +128,7 @@ public class addstudent extends javax.swing.JFrame {
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 217, 645, 133));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 645, 133));
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 255, 51));
@@ -137,7 +143,7 @@ public class addstudent extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(125, 378, 243, -1));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, 243, -1));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 255, 51));
@@ -209,8 +215,8 @@ public class addstudent extends javax.swing.JFrame {
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(0, 255, 51));
-        jLabel10.setText("Address:");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 217, -1, -1));
+        jLabel10.setText("Email ID:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
 
         jTextField3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jTextField3.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -233,7 +239,7 @@ public class addstudent extends javax.swing.JFrame {
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(0, 255, 51));
         jLabel11.setText("Course:");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 381, -1, -1));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(0, 255, 51));
@@ -256,13 +262,13 @@ public class addstudent extends javax.swing.JFrame {
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 497, -1, -1));
 
         jComboBox2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Who Was Your Favorite Teacher In School?", "What Is Your Favorite Movie?", "What Is Your Grand Father's Name?", "At Which Class You Learn To Ride Bicycle?", "Name Of the First Pet You Ever Had:" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "@gmail.com", "@hotmail.com", "@outlook.com", "@yahoo.com" }));
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBox2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 532, 578, -1));
+        jPanel1.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 400, 160, -1));
 
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(0, 255, 51));
@@ -309,7 +315,7 @@ public class addstudent extends javax.swing.JFrame {
                 jTextField9ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(491, 371, 119, -1));
+        jPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 470, 119, -1));
 
         jButton7.setText("Generate Fee");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
@@ -317,15 +323,20 @@ public class addstudent extends javax.swing.JFrame {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(386, 370, -1, -1));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 470, -1, -1));
 
         jTextField5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
         jTextField5.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jTextField5KeyTyped(evt);
             }
         });
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(245, 176, 194, -1));
+        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 194, -1));
 
         jTextField10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -379,8 +390,61 @@ public class addstudent extends javax.swing.JFrame {
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(508, 665, -1, -1));
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 262, -1, -1));
 
-        jLabel18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/wolf-howling-at-the-moon-wallpaper-for-1366x768-67-944.jpg"))); // NOI18N
-        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(0, 255, 51));
+        jLabel18.setText("Address:");
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 217, -1, -1));
+
+        jTextField13.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jTextField13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField13ActionPerformed(evt);
+            }
+        });
+        jTextField13.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField13KeyTyped(evt);
+            }
+        });
+        jPanel1.add(jTextField13, new org.netbeans.lib.awtextra.AbsoluteConstraints(245, 176, 194, -1));
+
+        jTextField14.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jTextField14.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField14KeyTyped(evt);
+            }
+        });
+        jPanel1.add(jTextField14, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 194, -1));
+
+        jComboBox3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Who Was Your Favorite Teacher In School?", "What Is Your Favorite Movie?", "What Is Your Grand Father's Name?", "At Which Class You Learn To Ride Bicycle?", "Name Of the First Pet You Ever Had:" }));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 532, 578, -1));
+
+        jLabel19.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(0, 255, 51));
+        jLabel19.setText("Mob No.:");
+        jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 410, -1, -1));
+
+        jTextField15.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jTextField15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField15ActionPerformed(evt);
+            }
+        });
+        jTextField15.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextField15KeyTyped(evt);
+            }
+        });
+        jPanel1.add(jTextField15, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 410, 194, -1));
+
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Beautiful-Nature-Painting-4K-Wallpaper-1366x768.png"))); // NOI18N
+        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -467,33 +531,39 @@ public class addstudent extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-         if((jTextField7.getText().length()==0)||(jTextField1.getText().length()==0)||(jTextField2.getText().length()==0)||(jTextField3.getText().length()==0)||(jTextField4.getText().length()==0)||(jTextField5.getText().length()==0)||(jTextField6.getText().length()==0)||(jTextArea1.getText().length()==0)||(((String)jComboBox1.getSelectedItem()).length()==0)||(jTextField9.getText().length()==0)||(((String)jComboBox2.getSelectedItem()).length()==0)||(jTextField8.getText().length()==0)||(jTextField11.getText().length()==0)||(jTextField12.getText().length()==0))
+         if((jTextField7.getText().length()==0)||(jTextField1.getText().length()==0)||(jTextField2.getText().length()==0)||(jTextField3.getText().length()==0)||(jTextField4.getText().length()==0)||(jTextField5.getText().length()==0)||(jTextField6.getText().length()==0)||(jTextArea1.getText().length()==0)||(((String)jComboBox1.getSelectedItem()).length()==0)||(jTextField9.getText().length()==0)||(((String)jComboBox2.getSelectedItem()).length()==0)||(jTextField8.getText().length()==0)||(jTextField11.getText().length()==0)||(jTextField12.getText().length()==0)||(jTextField5.getText().length()==0)||(jTextField15.getText().length()==0))
             {JOptionPane.showMessageDialog(null, "Please Insert All Fields"); }
          else{
         try{
-            String sql="insert into student(shid,sfn,sln,ffn,fln,mfn,mln,address,course,sq,sqa,photo,fee,rno,bno,year) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ";
+            String sql="insert into student(shid,sn,fn,mn,address,course,sq,sqa,photo,fee,rno,bno,year,email,mob) values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ";
             String sql2="update room set rno=?,bno=? where rowid=1";
             String sql3="update printable set shid=? where rowid=1";
             pst2=conn.prepareStatement(sql2);
             pst=conn.prepareStatement(sql);
             pst3=conn.prepareStatement(sql3);
+            String sn=jTextField1.getText()+" "+jTextField2.getText();
+            String fn=jTextField3.getText()+" "+jTextField4.getText();
+            String mn=jTextField13.getText()+" "+jTextField6.getText();
+            String email=jTextField5.getText()+(String)jComboBox2.getSelectedItem();
+            
+            
+            
             pst.setString(1,jTextField7.getText());
-            pst.setString(2,jTextField1.getText());
-            pst.setString(3,jTextField2.getText());
-            pst.setString(4,jTextField3.getText());
-            pst.setString(5,jTextField4.getText());
-            pst.setString(6,jTextField5.getText());
-            pst.setString(7,jTextField6.getText());
-            pst.setString(8,jTextArea1.getText());
-            pst.setString(9,(String)jComboBox1.getSelectedItem());
+            pst.setString(2,sn);
+            pst.setString(3,fn);
+            pst.setString(4,mn);
+            pst.setString(5,jTextArea1.getText());
+            pst.setString(6,(String)jComboBox1.getSelectedItem());
            //pst.setString(13,jTextField9.getText());
-            pst.setString(10,(String)jComboBox2.getSelectedItem());
-            pst.setString(11,jTextField8.getText());
-            pst.setBytes(12,person_image);
-            pst.setString(13,jTextField9.getText());
-            pst.setString(14,jTextField11.getText());
-            pst.setString(15,jTextField12.getText());
-            pst.setString(16,"1");
+            pst.setString(7,(String)jComboBox3.getSelectedItem());
+            pst.setString(8,jTextField8.getText());
+            pst.setBytes(9,person_image);
+            pst.setString(10,jTextField9.getText());
+            pst.setString(11,jTextField11.getText());
+            pst.setString(12,jTextField12.getText());
+            pst.setString(13,"1");
+            pst.setString(14,email);
+            pst.setString(15,jTextField15.getText());
             pst2.setString(1,jTextField11.getText());
             pst2.setString(2,jTextField12.getText());
             pst3.setString(1,jTextField7.getText());
@@ -675,6 +745,45 @@ public class addstudent extends javax.swing.JFrame {
         ob.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
+    private void jTextField13KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField13KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField13KeyTyped
+
+    private void jTextField14KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField14KeyTyped
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField14KeyTyped
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox3ActionPerformed
+
+    private void jTextField15KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField15KeyTyped
+        // TODO add your handling code here:
+        char c=evt.getKeyChar();
+        if(!(Character.isDigit(c) ||(c==KeyEvent.VK_BACKSPACE)||(c==KeyEvent.VK_DELETE)))
+        {
+         getToolkit().beep();
+         evt.consume();
+        }
+        if(jTextField15.getText().length()>=10){
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(null,"Mobile No. length cant be higher than 10");
+        }
+    }//GEN-LAST:event_jTextField15KeyTyped
+
+    private void jTextField15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField15ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField15ActionPerformed
+
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jTextField13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField13ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -722,6 +831,7 @@ public class addstudent extends javax.swing.JFrame {
     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -732,7 +842,9 @@ public class addstudent extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -748,6 +860,9 @@ public class addstudent extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField11;
     private javax.swing.JTextField jTextField12;
+    private javax.swing.JTextField jTextField13;
+    private javax.swing.JTextField jTextField14;
+    private javax.swing.JTextField jTextField15;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;

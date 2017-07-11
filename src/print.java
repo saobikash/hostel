@@ -39,19 +39,18 @@ public class print extends javax.swing.JFrame {
             rs=pst.executeQuery();
             if(rs.next()){
                 String shid=rs.getString("shid");
-                String sfn=rs.getString("sfn");
-                String sln=rs.getString("sln");
-                String ffn=rs.getString("ffn");
-                String fln=rs.getString("fln");
-                String mfn=rs.getString("mfn");
-                String mln=rs.getString("mln");
+                String sn=rs.getString("sn");
+                String fn=rs.getString("fn");
+                String mn=rs.getString("mn");
                 String address=rs.getString("address");
                 String course=rs.getString("course");
                 String fee=rs.getString("fee");
                 String year=rs.getString("year");
                 String rno=rs.getString("rno");
                 String bno=rs.getString("bno");
-                String str="\t  BILL\n-------------------------------------------------\n               (VSSUT,BURLA)\n"+"  Hostel ID:"+shid+"\n"+"  Student Name:"+sfn +" "+sln+"\n"+"  Father Name:"+ffn+" "+fln+"\n"+"  Mother Name:"+mfn+" "+mln+"\n"+"  Address:"+address+"\n"+"  Course:"+course+"\n"+"  Academic Year:"+year+"\n"+"  Allocated Seat:Room No."+rno+"'s Bed No."+bno+"\n"+"  Fee:"+fee+"\n";
+                String email=rs.getString("email");
+                String mob=rs.getString("mob");
+                String str="\t  BILL\n-------------------------------------------------\n               (VSSUT,BURLA)\n"+"  Hostel ID:"+shid+"\n"+"  Student Name:"+sn+"\n"+"  Father Name:"+fn+"\n"+"  Mother Name:"+mn+"\n"+"  Address:"+address+"\n"+"  Course:"+course+"\n"+"  Academic Year:"+year+"\n"+"  Allocated Seat:Room No."+rno+"'s Bed No."+bno+"\n"+"  Email:"+email+"\n"+"  Mobile No.:"+mob+"\n"+"  Fee:"+fee+"\n";
                 jTextArea1.setText(str);
                 
                 rs.close();
